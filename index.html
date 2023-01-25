@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ddl-reminder</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>ddl-reminder</h1>
+    </header>
+    <button class="add" id="add" onclick="add()">+</button>
+    <form id="reminder-body">      
+        <div id="1">
+          <!-- 这个按钮按下去就可以删除该条ddl -->
+          <button class="btn" onclick="del(this)">任务完成</button>
+          <!-- 这是ddl内容 -->
+          <input type="text">
+          <!-- 距离ddl还有多少时间 -->
+          <label id="ddl-time"></label>
+          <input type="text" id="ddl_time_text" placeholder="格式:12/31/2024 00:00:00">
+          <button class="btn" onclick="count_down(this)">确认</button>
+        </div>      
+    </form>
+    
+    
+    <script src="main.js"></script>
+  </body>
+</html>
