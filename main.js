@@ -19,7 +19,7 @@ function add() {
     <!-- 这是ddl内容 -->
     <input type="text"  placeholder="ddl内容">
     <!-- 距离ddl还有多少时间 -->
-    <label id="ddl-time"></label>
+    <label id="ddl-time" style="display: none;"></label>
     <input type="text" id="ddl_time_text" placeholder="格式:08/31/2024 00:00:00">
     <button class="btn" onclick="count_down(this)">确认</button>
     <!-- 在haha里存储ddl时间 -->
@@ -38,6 +38,7 @@ function count_down(my) {
     var [d,h,m,s]=[arr[0],arr[1],arr[2],arr[3]];
     //删除输入框和确认键 添加倒计时
     my.previousElementSibling.previousElementSibling.innerHTML=`ddl在${d}天${h}小时${m}分之后`;
+    my.previousElementSibling.previousElementSibling.setAttribute("style","display:")
     my.nextElementSibling.innerHTML= my.previousElementSibling.value;
     (my.previousElementSibling).remove();
     (my).remove();
