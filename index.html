@@ -11,17 +11,20 @@
     <header>
       <h1>ddl-reminder</h1>
     </header>
-    <button class="add" id="add" onclick="add()">+</button>
+    <!-- 增加按钮没有必要, 应该和确认按钮绑定在一起 -->
+    <!-- <button class="add" id="add" onclick="add()">+</button> -->
     <form id="reminder-body">      
         <div id="1">
           <!-- 这个按钮按下去就可以删除该条ddl -->
           <button class="btn" onclick="del(this)">任务完成</button>
           <!-- 这是ddl内容 -->
-          <input type="text">
+          <input type="text"  placeholder="ddl内容">
           <!-- 距离ddl还有多少时间 -->
           <label id="ddl-time"></label>
-          <input type="text" id="ddl_time_text" placeholder="格式:12/31/2024 00:00:00">
+          <input type="text" id="ddl_time_text" placeholder="格式:08/31/2024 00:00:00">
           <button class="btn" onclick="count_down(this)">确认</button>
+          <!-- 在haha里存储ddl时间 -->
+          <label style="display:none"></label>
         </div>      
     </form>
     
