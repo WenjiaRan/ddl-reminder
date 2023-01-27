@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,8 +21,11 @@
           <input type="text"  placeholder="ddl内容">
           <!-- 距离ddl还有多少时间 -->
           <label id="ddl-time" style="display: none;"></label>
-          <input type="text" id="ddl_time_text" placeholder="格式:08/31/2024 00:00:00">
-          <button class="btn" onclick="count_down(this)">确认</button>
+          <!-- <input type="text" id="ddl_time_text" placeholder="格式:08/31/2024 00:00:00"> -->
+          <input type="date" id="ddl_time_text">
+          <!-- <input type="time" id="date"> -->
+          <button class="btn" onclick="count_down(this)" >确认</button>
+           
           <!-- 在haha里存储ddl时间 -->
           <label style="display:none"></label>
         </div>      

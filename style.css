@@ -81,7 +81,16 @@ input:focus{
 
 #ddl-time
 {
-    background: rgb(240, 239, 239);
+    /* background: rgb(240, 239, 239); */
     border-radius: 5px;
     padding: 7.5px 15px;
 }
+
+/* #date {
+    border: none;
+    border-radius: 5px;
+    min-height: 50px;
+    width: 100%;
+    padding: 0 15px;
+    font-size: 18px;
+} */

@@ -14,14 +14,15 @@ function del(my) {
 function add() {
     var elem = document.createElement("div");
     elem.id = "1";
-    elem.innerHTML = `<!-- 这个按钮按下去就可以删除该条ddl -->
-    <button class="btn" onclick="del(this)">任务完成</button>
+    elem.innerHTML = `<button class="btn" onclick="del(this)">任务完成</button>
     <!-- 这是ddl内容 -->
     <input type="text"  placeholder="ddl内容">
     <!-- 距离ddl还有多少时间 -->
     <label id="ddl-time" style="display: none;"></label>
-    <input type="text" id="ddl_time_text" placeholder="格式:08/31/2024 00:00:00">
-    <button class="btn" onclick="count_down(this)">确认</button>
+    <!-- <input type="text" id="ddl_time_text" placeholder="格式:08/31/2024 00:00:00"> -->
+    <input type="date" id="ddl_time_text">
+    <!-- <input type="time" id="date"> -->
+    <button class="btn" onclick="count_down(this)" >确认</button>   
     <!-- 在haha里存储ddl时间 -->
     <label style="display:none"></label>`;
     form.appendChild(elem);
@@ -31,7 +32,7 @@ function add() {
 // my是一个按钮
 function count_down(my) {
     //const endDate = '01/01/2024 00:00:00';
-    const endDate = my.previousElementSibling.value
+    const endDate = my.previousElementSibling.value+' 23:59:59';
     // date format mm/dd/yyyy
 
     var arr=cal_time(endDate);
@@ -39,7 +40,7 @@ function count_down(my) {
     //删除输入框和确认键 添加倒计时
     my.previousElementSibling.previousElementSibling.innerHTML=`ddl在${d}天${h}小时${m}分之后`;
     my.previousElementSibling.previousElementSibling.setAttribute("style","display:")
-    my.nextElementSibling.innerHTML= my.previousElementSibling.value;
+    my.nextElementSibling.innerHTML= endDate;
     (my.previousElementSibling).remove();
     (my).remove();
     // 不移除元素，只是让他隐形
